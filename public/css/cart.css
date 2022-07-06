@@ -1,0 +1,595 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: "Heebo", sans-serif;
+  font-family: "Roboto", sans-serif;
+  font-family: "Sen", sans-serif;
+}
+
+.fixed {
+  display: inline-block;
+  z-index: 2;
+  position: fixed;
+  cursor: pointer;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+}
+/* bella cash yello stick icon */
+
+.bella-cash {
+  width: 11vw;
+  height: 9vh;
+  padding: 5px;
+  background-color: rgb(255, 196, 0);
+  border-radius: 30px;
+  display: flex;
+  bottom: 10px;
+  left: 10px;
+  margin-left: 10px;
+}
+.bella-cash > img {
+  width: 2.5vw;
+  margin: auto;
+}
+.bella-cash h6 {
+  margin: auto auto auto 0;
+}
+/* whatsapp icon sticy */
+.whatapp-icon {
+  bottom: 10px;
+  right: 5px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+.whatapp-icon > img {
+  width: 60px;
+  margin: auto;
+}
+
+.main-container {
+  /* padding-top: 23vh; */
+  width: 85vw;
+  margin: auto;
+}
+
+/* after navbar */
+.main-container > .after-navbar {
+  height: 20vh;
+}
+
+.after-navbar > .current-page {
+  font-size: 0.9rem;
+  color: rgb(105, 104, 104);
+  margin-bottom: 10px;
+  font-weight: normal;
+}
+.after-navbar h4 {
+  font-family: "Signika", sans-serif;
+  cursor: pointer;
+}
+
+.after-navbar .countinue-shopping-ahref {
+  display: flex;
+  justify-content: flex-end;
+}
+.after-navbar .countinue-shopping-ahref a {
+  text-decoration: none;
+  color: black;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.cart-item-details {
+  /* border: 1px solid blue; */
+  display: flex;
+  justify-content: space-between;
+}
+
+/* product-list-table-head */
+.main-container > .cart-item-details > .product-list-table {
+  /* border: 1px solid red; */
+  height: 6vh;
+  width: 65%;
+  height: auto;
+  grid-area: item;
+}
+.main-container > .cart-item-details .cart-total-main_div {
+  /* border: 1px solid red; */
+  width: 30%;
+  grid-area: total;
+}
+
+/* responsiveness */
+@media screen and (max-width: 900px) {
+  .cart-item-details {
+    display: grid;
+    grid-template-areas:
+      "item"
+      "total";
+  }
+
+  .main-container > .cart-item-details > .product-list-table {
+    /* border: 1px solid red; */
+    width: 95%;
+    margin: auto;
+    height: auto;
+  }
+  .main-container > .cart-item-details .cart-total-main_div {
+    /* border: 1px solid red; */
+    width: 100%;
+    height: auto;
+  }
+  .table-head {
+    width: 80vw;
+    text-align: center;
+  }
+
+  .item-card {
+    display: inline-block;
+  }
+  .bella-cash h6 {
+    display: none;
+  }
+  .bella-cash {
+    width: 50px;
+    height: 50px;
+    left: 20px;
+  }
+  .bella-cash > img {
+    min-width: 30px;
+  }
+  .main-container {
+    width: 96%;
+  }
+  .remove{
+    display: none;
+  }
+  .head-item-name{
+    /* border:1px solid red; */
+    height: 100px;
+    overflow:hidden;
+  }
+}
+@media screen and (max-width: 395px) {
+  .bella-cash {
+    display: none;
+  }
+  .remove{
+    display: none;
+  }
+}
+
+/* //screen at 724 px and below */
+@media screen and (max-width: 724px) {
+  .item-text > .head-item-name {
+    height: 52px;
+    overflow: hidden;
+  }
+}
+
+/* Table head for cart item display and total payment section */
+.table-head {
+  background-color: rgb(247, 244, 244);
+  /* border-bottom: 1px solid rgb(231, 231, 231); */
+  height: 5vh;
+  color: rgb(90, 90, 90);
+  font-size: 0.9em;
+  box-shadow: 0 4px 5px -6px #222;
+  padding: 5px 5px 0px 5px;
+}
+.cart-total-main_div > .table-head {
+  display: flex;
+  justify-content: center;
+}
+
+/* right side payment div section */
+.cart-item-details .cart-total-main_div .payemnt-details-box {
+  height: 50vh;
+}
+
+/* Item card style */
+.item-card {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  display: flex;
+  height: 200px;
+  /* border: 1px solid black; */
+}
+.item-card > img {
+  max-width: 200px;
+  height: 130px;
+  margin: auto 20px auto 0;
+  cursor: pointer;
+}
+
+.item-text p {
+  font-size: 0.9em;
+  padding: 0px;
+  margin: 0px;
+  font-weight: 100;
+  cursor: pointer;
+}
+.head-item-name > .item-name {
+  font-size: 0.9em;
+  font-weight: bold;
+  margin: 5px auto 8px auto;
+  cursor: pointer;
+}
+#item_price {
+  margin: 10px auto 10px auto;
+}
+.qty-box {
+  width: 150px;
+  margin: 5px 3vw 10px 0;
+  border: 1px solid rgb(182, 181, 181);
+}
+
+#qty {
+  width: 60px;
+  text-align: center;
+  outline: none;
+  border-top: none;
+  border-bottom: none;
+  border-left: 1px solid rgb(182, 181, 181);
+  border-right: 1px solid rgb(182, 181, 181);
+}
+
+/* to remove number increment decrement spinner arrow */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.qty-box button {
+  width: 40px;
+  font-size: 1.5em;
+  color: rgb(116, 114, 114);
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+}
+.remove {
+  position: relative;
+  top: -90px;
+  left: 350px;
+}
+/* undeline animation effect */
+.left {
+  position: relative;
+}
+.left:before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  background-color: #fff;
+  visibility: hidden;
+  transition: all 0.5s ease-in-out;
+}
+.left:hover:before {
+  visibility: visible;
+  width: 100%;
+  background-color: rgb(158, 157, 157);
+}
+/* underline animation effect end hare */
+
+.left span {
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+.remove {
+  cursor: pointer;
+  text-decoration:none;
+  font-weight: 400;
+  color: rgb(143, 139, 139);
+}
+
+.remove button {
+  margin-top: 10px;
+  border: none;
+  font-size: 0.9em;
+  margin-left: 3vw;
+  color: rgb(182, 181, 181);
+  cursor: pointer;
+  background-color: transparent;
+}
+.remove button:hover {
+  color: black;
+}
+
+/* /////////////////////////// */
+/* external div is parent div of remove button and qty control div */
+#external-part {
+  position: absolute;
+  display: flex;
+}
+/* remove button position */
+.remove {
+  position: relative;
+  left: 10vw;
+  top: 140px;
+}
+/* qty position control */
+.ui {
+  position: relative;
+  top: 140px;
+  left: 150px;
+}
+.card {
+  border: none;
+}
+/* ////////////////////////////////////
+Order summary 
+*/
+.payemnt-details-box > .total {
+  padding: 10px;
+  border-bottom: 1px solid rgb(207, 204, 204);
+  height: 14vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.payemnt-details-box > .total p {
+  /* height:auto; */
+  /* line-height:25px; */
+  font-weight: bold;
+}
+/* After total div */
+.payemnt-details-box > p {
+  text-align: center;
+  font-size: 0.8rem;
+  margin-top: 10px;
+}
+p > span > img {
+  width: 70px;
+}
+/* checkout button */
+.payemnt-details-box button {
+  width: 100%;
+  height: 45px;
+  border: none;
+  font-size: 1rem;
+  color: #fff;
+  font-weight: bold;
+  background-color: rgb(82, 179, 89);
+}
+
+/* after checkout button icons */
+.icon {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 5px;
+  margin-top: 3vh;
+}
+.icon div img {
+  width: 60px;
+}
+.icon div p {
+  font-size: 0.65rem;
+  width: 50px;
+  line-height: 10px;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* ///////////
+best-seller silde  
+*/
+.item-slider-div {
+  width: 100%;
+  display: flex;
+  overflow: hidden;
+}
+
+/* //slider control bottons */
+.leftside,
+.rightside {
+  border: 1px solid rgb(189, 188, 188);
+  display: flex;
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+  margin: auto;
+  position: relative;
+  /* position:absolute; */
+  z-index: 3;
+}
+.leftside:hover,
+.rightside:hover {
+  background-color: rgb(216, 227, 228);
+}
+.leftside > img,
+.rightside > img {
+  width: 30px;
+  height: 30px;
+}
+.leftside {
+  bottom: -170px;
+  left: -50.5%;
+}
+.rightside {
+  right: -51%;
+  top: -215px;
+}
+/* rating div */
+#stars {
+  position: relative;
+  left: 10px;
+  bottom: 12px;
+}
+.stars span {
+  font-size: 0.7rem;
+}
+/* //slider-card */
+.slider-card {
+  min-width: 210px;
+  font-size: 0.9rem;
+  line-height: 20px;
+  align-items: center;
+  padding: 10px;
+  border-radius: 10px;
+  margin: 10px 12px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  /* rottation animation */
+  animation: slide 100s linear infinite;
+}
+
+/* .slider-card:hover{
+  animation-play-state: paused;
+  z-index: 3;
+  background-color:rgb(168, 167, 167);
+} */
+
+/* slidng left */
+
+@keyframes slide {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-1692px, 0, 0);
+  }
+}
+
+.slide-card-name {
+  height: 45px;
+  overflow: hidden;
+  cursor: pointer;
+}
+.slider-card > div > img {
+  width: 100%;
+  cursor: pointer;
+}
+/* price box of slider */
+.price-div {
+  display: flex;
+  justify-content: space-between;
+  padding: 2px 7px;
+  color: red;
+}
+.price-div > .old_price {
+  color: gray;
+  text-decoration: line-through;
+}
+.buy-now-tag {
+  position: relative;
+  text-align: center;
+  z-index: 3;
+  display: none;
+}
+.buy-now-tag > #buy {
+  position: absolute;
+  top: -20vh;
+  background-color: black;
+  color: white;
+  height: 30px;
+  width: 100%;
+  text-align: center;
+  cursor: pointer;
+}
+.buy-now-tag > #buy > p {
+  padding-top: 4px;
+  font-size: 1rem;
+}
+.buy-now-tag > #quick {
+  position: absolute;
+  top: -25px;
+  width: 100%;
+  height: 22px;
+  background-color: rgb(116, 116, 116);
+  color: #fff;
+}
+
+.slider-card > div > img:hover {
+  opacity: 0.5;
+}
+
+/* /// below one line code is adding effect on card, on hovering image its change display type of .buy-now-tag div from none to block */
+.slider-card > div > img:hover + .buy-now-tag {
+  display: block;
+}
+
+#buy:hover {
+  background-color: #52b359;
+}
+
+/* Button used to open the chat form - fixed at the bottom of the page */
+
+/* The popup chat - hidden by default */
+.chat-popup {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 15px;
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+}
+
+/* Add styles to the form container */
+.form-container {
+  max-width: 300px;
+  padding: 10px;
+  background-color: white;
+}
+
+/* Full-width textarea */
+.form-container textarea {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+  resize: none;
+  min-height: 200px;
+}
+
+/* When the textarea gets focus, do something */
+.form-container textarea:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for the submit/send button */
+.form-container .btn {
+  background-color: green;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom: 10px;
+  opacity: 0.8;
+}
+
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+  background-color: red;
+}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover,
+.open-button:hover {
+  opacity: 1;
+}
+
+@media screen and (max-width: 400px) {
+  .rightside {
+    right: -26%;
+    top: -215px;
+    background-color: white;
+  }
+  .leftside {
+    background-color: white;
+  }
+}

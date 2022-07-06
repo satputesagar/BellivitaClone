@@ -1,0 +1,842 @@
+body {
+    margin: 0;
+    font-size: 14px;
+    font-family: Roboto, sans-serif;
+    position: relative;
+    overflow-x: hidden;
+  }
+  header {
+    background-image: url("https://cdn.shopify.com/s/files/1/0054/6665/2718/files/checkout-header.jpg?41107");
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 12em;
+    position: relative;
+  }
+  #logo_box {
+    width: 60%;
+    height: 6em;
+    position: relative;
+    left: 14%;
+    top: 32%;
+  }
+  #logo {
+    width: 20%;
+    height: 100%;
+  }
+  
+  /* container */
+  #container {
+    width: 100%;
+    display: flex;
+    /* border: 1px solid black; */
+    margin-top: 2em;
+    justify-content: space-evenly;
+  }
+  #container_left {
+    width: 42%;
+    height: 100%;
+    /* border: 1px solid red; */
+  }
+  /*<--------------------------------- check status css------------------------> */
+  #status {
+    width: 100%;
+    margin: auto;
+    /* border: 1px solid green; */
+    height: 2.5em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .filled {
+    width: 20%;
+    height: 1px;
+    background-color: green;
+  }
+  .toggle {
+    width: 20%;
+    height: 1px;
+    background-color: green;
+  }
+  .dotted {
+    width: 20%;
+    height: 1px;
+    border-top: 0.1px dashed #ccc;
+  }
+  .status_title {
+    width: 8%;
+    height: 100%;
+    /* border: 1px solid blue; */
+  }
+  .circle {
+    width: 100%;
+    height: 90%;
+    /* border: 1px solid red; */
+    border-radius: 50%;
+    color: white;
+    background-color: #52b359;
+    text-align: center;
+  }
+  .circle p {
+    margin: 0;
+    padding-top: 4px;
+  }
+  #da {
+    box-shadow: 0 0 21px rgb(59 179 0);
+  }
+  #prepaid {
+    background-color: #ccc;
+  }
+  #pay {
+    background-color: #ccc;
+  }
+  #cart_page:hover,
+  #delivery_page:hover,
+  #prepaid_page:hover,
+  #payment_page:hover {
+    cursor: pointer;
+  }
+  #top {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    margin: auto;
+  }
+  #top_titles {
+    width: 102%;
+    display: flex;
+    justify-content: space-between;
+  }
+  #top_titles p {
+    font-size: 0.8em;
+  }
+  /*<--------------------------------- check delivery page part-------------------------> */
+  #contact_info {
+    width: 100%;
+    margin-top: 3em;
+    height: 50em;
+  }
+  .title {
+    font-size: 1.1em;
+    font-weight: 400;
+    text-transform: uppercase;
+  }
+  #login_details {
+    width: 80%;
+    height: 6em;
+    /* border: 1px solid black; */
+    display: flex;
+    align-items: center;
+  }
+  #admin {
+    width: 10%;
+    height: 50%;
+    margin-left: 1em;
+  }
+  #admin img {
+    width: 100%;
+    height: 100%;
+  }
+  #details {
+    display: flex;
+    flex-direction: column;
+    margin-left: 1em;
+  }
+  #details p {
+    margin: 0;
+    font-size: 1em;
+    color: #5a4e5a;
+  }
+  #details a {
+    text-decoration: none;
+    font-size: 1em;
+    color: black;
+  }
+  #check {
+    width: 70%;
+    height: 1.8em;
+    margin-top: 0.4em;
+    font-size: 0.9em;
+    margin-bottom: 0.5em;
+    /* border: 1px solid black; */
+    display: flex;
+  }
+  .checkbox_size {
+    width: 1.4em;
+    height: 1.4em;
+    vertical-align: middle;
+    margin-right: 0.5em;
+  }
+  #check_label {
+    display: block;
+    color: #5a4e5a;
+  }
+  .checkbox_size:hover {
+    cursor: pointer;
+  }
+  .dotted_div {
+    border-top: 1px dashed black;
+    width: 100%;
+    margin-bottom: 1em;
+  }
+  /* address */
+  #fl,
+  #f2 {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+  }
+  #fl div {
+    width: 49%;
+  }
+  #floatingInput1:focus,
+  #floatingInput2:focus,
+  #floatingInput3:focus,
+  #floatingInput4:focus,
+  #floatingInput5:focus,
+  #floatingInput6:focus,
+  #floatingInput7:focus,
+  #floatingInput8:focus {
+    outline: none;
+    box-shadow: none;
+    border: 0.5px solid rgb(219, 216, 216);
+  }
+  .form-floating {
+    margin-bottom: 1em;
+  }
+  #f2 div {
+    width: 32%;
+  }
+  #btn {
+    width: 100%;
+    padding: 2%;
+    background-color: #222;
+    color: #fff;
+    border: none;
+    height: 4em;
+    font-weight: bold;
+    border-radius: 2px;
+  }
+  #payment_methods {
+    width: 100%;
+    height: 5em;
+    margin-top: 1em;
+  }
+  #pm {
+    width: 100%;
+    height: 100%;
+  }
+  footer {
+    width: 40%;
+    height: 2em;
+    border-top: 1px solid #e6e6e6;
+    padding-top: 0.8em;
+    position: absolute;
+    bottom: 1em;
+  }
+  footer span {
+    margin-right: 1em;
+    font-size: 0.9em;
+    font-weight: normal;
+  }
+  
+  footer span:hover {
+    cursor: pointer;
+  }
+  
+  #container_right {
+    width: 30%;
+    height: 100%;
+    /* border: 1px solid red; */
+  }
+  #item_div {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: #faf4f4;
+    min-height: 20em;
+    align-items: center;
+    /* border: 1px solid black; */
+    padding-bottom: 0.9em;
+  }
+  #item {
+    width: 95%;
+    height: 7em;
+    /* border: 1px solid red; */
+    margin-top: 0.8em;
+    background-color: white;
+    display: flex;
+    justify-content: space-around;
+    /* align-items: center; */
+  }
+  #item_img_div {
+    width: 17%;
+    height: 75%;
+    /* border: 1px solid blue; */
+    position: relative;
+    margin-top: 0.6em;
+  }
+  #item_img {
+    position: absolute;
+    width: 90%;
+    height: 80%;
+    border: 1px solid rgb(231, 228, 228);
+    bottom: 0;
+  }
+  #qty_circle {
+    position: absolute;
+    width: 1.3em;
+    height: 1.3em;
+    background-color: #808080;
+    top: 0.3em;
+    right: 0;
+    z-index: 1;
+    border-radius: 50%;
+    text-align: center;
+  }
+  #qty_circle p {
+    color: white;
+    font-size: 0.8em;
+    font-weight: 600;
+  }
+  #title_div {
+    position: relative;
+    width: 56%;
+    height: 90%;
+    /* border: 1px solid green; */
+    display: flex;
+    flex-direction: column;
+    padding-top: 0.5em;
+  }
+  #item_name {
+    font-size: 0.8em;
+    font-weight: 600;
+    color: #3a3a3a;
+    margin: 0;
+  }
+  #count_div {
+    position: absolute;
+    bottom: 0;
+    width: 40%;
+    height: 1.9em;
+    /* border: 1px solid black; */
+    display: flex;
+    background-color: whitesmoke;
+  }
+  #incre,
+  #decre,
+  #count_value {
+    width: 33%;
+    height: 100%;
+    /* border: 1px solid green; */
+    text-align: center;
+    font-size: 1.2em;
+  }
+  #incre,
+  #decre {
+    color: darkgreen;
+    font-weight: bold;
+  }
+  
+  #incre:hover,
+  #decre:hover {
+    cursor: pointer;
+  }
+  #price_div {
+    width: 17%;
+    height: 75%;
+    /* border: 1px solid blue; */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-around;
+    margin-top: 0.6em;
+  }
+  #delete_icon {
+    width: 1.5em;
+    height: 1.5em;
+    background-image: url("https://www.kohls.com/cnc/media/41.0.0-900/images/dgsImages/trash-icon.png");
+    background-size: contain;
+    margin-right: 1.5em;
+    margin-top: 0.3em;
+  }
+  #delete_icon:hover {
+    cursor: pointer;
+  }
+  #item_price {
+    font-weight: 600;
+    margin-right: 1em;
+  }
+  /* advertisement */
+  #advert {
+    width: 100%;
+    height: 27em;
+    /* border: 1px solid black; */
+    margin-top: 1em;
+    background-color: #f3c746;
+    padding-top: 1em;
+  }
+  #advert h2 {
+    color: #323232;
+    font-size: 1em;
+    margin-left: 1em;
+    margin-bottom: 0;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    line-height: 1.3em;
+  }
+  #advert p {
+    color: #fff;
+    margin-left: 1em;
+    font-size: 1em;
+  }
+  .blink_me {
+    animation: blinker 600ms infinite;
+  }
+  @keyframes blinker {
+    0% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 0.5;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  #slider {
+    width: 95%;
+    height: 75%;
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: space-around;
+    /* overflow-x: scroll; */
+    margin-left: 1.1em;
+  }
+  .child {
+    width: 10em;
+    height: 95%;
+    /* border: 1px solid blue; */
+    display: inline-block;
+    border-radius: 0.5em;
+    margin-left: 0.5em;
+    box-shadow: 0 0 9px -1px rgb(0 0 0 / 20%);
+  }
+  .child img {
+    width: 100%;
+    height: 100%;
+    border-radius: 0.5em;
+  }
+  /* coupon */
+  #coupon_div {
+    width: 100%;
+    height: 2.7em;
+    border: 1px solid rgb(209, 206, 206);
+    margin-top: 1em;
+    display: flex;
+  }
+  i {
+    font-size: 1.7em;
+    margin-left: 0.2em;
+    /* border: 1px solid black; */
+  }
+  #coupon_div input {
+    margin: 0;
+    width: 75%;
+    font-size: 1em;
+    outline: none;
+    border: none;
+  }
+  #coupon_div button {
+    width: 20%;
+    height: 100%;
+    background-color: white;
+    border: none;
+    border: 1px solid #52b359;
+  }
+  /* total div */
+  #total_div {
+    width: 100%;
+    height: 10em;
+    background-color: whitesmoke;
+    margin-top: 1em;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    padding-top: 0.8em;
+    padding-bottom: 0.9em;
+  }
+  #total_div_top {
+    height: 40%;
+    width: 90%;
+    margin: auto;
+  }
+  #total_div_bottom {
+    height: 40%;
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  #sub_total_div {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.8em;
+  }
+  #shipping_div {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.8em;
+  }
+  #sub_total_div p {
+    margin-bottom: 0.4em;
+    font-weight: 600;
+    font-size: 1.05em;
+  }
+  #tdb {
+    display: flex;
+    flex-direction: column;
+  }
+  #tdb p:nth-child(1) {
+    margin: 0;
+    font-size: 1.3em;
+  }
+  #span {
+    margin: 0;
+    font-size: 0.8em;
+  }
+  #line {
+    width: 90%;
+    border-top: 1px solid #ccc;
+    margin: 1em auto;
+  }
+  #tdb_amount span {
+    color: gray;
+    font-size: 0.8em;
+    font-weight: normal;
+  }
+  #tdb_amount {
+    font-weight: 600;
+  }
+  /* media queries */
+  /* header */
+  @media only screen and (min-width: 0px) and (max-width: 500px) {
+    header {
+      height: 6em;
+    }
+    #logo_box {
+      top: 10%;
+      width: 30%;
+      height: 4em;
+      left: 4%;
+    }
+    #logo {
+      width: 100%;
+    }
+    #status {
+      height: 1.6em;
+    }
+    .circle p {
+      padding-top: 0px;
+    }
+  }
+  /* container */
+  @media only screen and (min-width: 0px) and (max-width: 500px) {
+    #container {
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    #container_left {
+      width: 90%;
+      margin: auto;
+      height: 42em;
+      margin-bottom: 2em;
+    }
+    #container_right {
+      width: 90%;
+      margin: auto;
+    }
+    #item_name {
+      font-size: 0.6em;
+      font-weight: normal;
+    }
+    #check {
+      font-size: 0.7em;
+    }
+    #contact_info {
+      margin-top: 0.5em;
+    }
+    #contact_info_top {
+      font-size: 0.7em;
+    }
+    #contact_info_bottom {
+      font-size: 0.7em;
+    }
+    #advert {
+      display: none;
+    }
+    footer {
+      display: none;
+    }
+    #top_titles p {
+      font-size: 0.5em;
+    }
+    #circle {
+      width: 100%;
+      height: 70%;
+    }
+    #item_price {
+      font-weight: 600;
+      font-size: 0.8em;
+    }
+  }
+  /*<--------------------------------- check cod part-------------------------> */
+  #demo {
+    width: 100%;
+    height: 62em;
+  }
+  #contact_div {
+    width: 100%;
+    border: 1px solid #ccc;
+  }
+  .contact_hr {
+    width: 95%;
+    margin: auto;
+    color: #ccc;
+  }
+  #email {
+    display: flex;
+    width: 95%;
+    margin: auto;
+    height: 2em;
+    margin-top: 1em;
+    justify-content: space-between;
+    margin-bottom: 1.5em;
+  }
+  .change {
+    color: #52b359;
+    font-weight: 400;
+  }
+  .change:hover {
+    cursor: pointer;
+  }
+  .contact_title {
+    font-size: 0.8em;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin-left: 1.1em;
+    margin-top: 1em;
+  }
+  #dotted_div {
+    margin-top: 2.5em;
+    margin-bottom: 2.5em;
+  }
+  #shipping_add {
+    display: flex;
+    width: 95%;
+    margin: auto;
+    height: 2em;
+    margin-top: 1em;
+    justify-content: space-between;
+    margin-bottom: 2.5em;
+  }
+  #shipping_address {
+    width: 85%;
+    height: 100%;
+  }
+  .title_ship {
+    font-size: 1em;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin-top: 1em;
+    margin-bottom: 1em;
+  }
+  #shipping_add_div {
+    width: 100%;
+    height: 20em;
+  }
+  .pmd {
+    width: 100%;
+    height: auto;
+    display: flex;
+    background-color: whitesmoke;
+    padding-top: 1em;
+  }
+  #pmd_hr {
+    width: 100%;
+    margin: auto;
+    color: rgb(121, 113, 113);
+  }
+  input[type="radio"] {
+    border: 0px;
+    width: 3.2%;
+    height: 1.5em;
+    margin-right: 1em;
+    margin-left: 1em;
+  }
+  input[type="radio"]:hover {
+    cursor: pointer;
+  }
+  .float_free {
+    margin-left: 4.5em;
+    font-weight: 600;
+  }
+  .float_price {
+    margin-left: 16.5em;
+    font-weight: 600;
+  }
+  .pmd p {
+    font-size: 0.9em;
+  }
+  .pmd p span {
+    font-size: 0.87em;
+    margin: 0;
+  }
+  #btn_prepaid {
+    width: 100%;
+    padding: 2%;
+    background-color: #222;
+    color: #fff;
+    border: none;
+    height: 4em;
+    font-weight: bold;
+    border-radius: 2px;
+    margin-top: 1.5em;
+  }
+  #paytm_offer {
+    width: 100%;
+    height: 5em;
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
+  }
+  #paytm_offer:hover {
+    cursor: pointer;
+  }
+  #paytm_offer img {
+    width: 100%;
+    height: 100%;
+  }
+  /* media queries */
+  @media only screen and (min-width: 0px) and (max-width: 500px) {
+    #email,
+    #shipping_add {
+      font-size: 0.8em;
+    }
+    #contact_div {
+      height: 13em;
+    }
+    .title_ship {
+      font-size: 0.8em;
+    }
+    #dotted_div {
+      margin: 1.5em 0;
+    }
+    input[type="radio"] {
+      border: 0px;
+      width: 3.2%;
+      height: 1.5em;
+      margin-right: 1em;
+      margin-left: 1em;
+    }
+    .float_free {
+      margin-left: 0em;
+      font-weight: 600;
+    }
+    .float_price {
+      margin-left: 8em;
+      font-weight: 600;
+    }
+    .pmd p {
+      font-size: 0.6em;
+    }
+    .pmd p span {
+      font-size: 0.8em;
+      margin: 0;
+    }
+    #btn_prepaid {
+      padding: 1%;
+      background-color: #222;
+      height: 3em;
+      font-weight: bold;
+      border-radius: 5px;
+    }
+    #paytm_offer {
+      height: 3.5em;
+    }
+  }
+  /*<--------------------------------- check payment page part-------------------------> */
+  #payment_contact_div {
+    width: 100%;
+    border: 1px solid #ccc;
+  }
+  #payment_method {
+    display: flex;
+    width: 95%;
+    margin: auto;
+    height: 2em;
+    margin-top: 1em;
+    justify-content: space-between;
+    margin-bottom: 1.5em;
+  }
+  #secure {
+    margin: 0;
+    margin-bottom: 1em;
+  }
+  .pay_pmd {
+    background-color: white;
+    border: 1px solid #ccc;
+    height: 5em;
+  }
+  .pay_pmd p {
+    font-weight: 700;
+    font-size: 1.05em;
+    margin: 0;
+    margin-bottom: 0.5em;
+  }
+  .credit_card {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+  }
+  .cred_images {
+    display: flex;
+  }
+  #btn_payment {
+    width: 30%;
+    padding: 2%;
+    background-color: #222;
+    color: #fff;
+    border: none;
+    height: 4em;
+    font-weight: bold;
+    border-radius: 2px;
+    margin-top: 1.5em;
+    float: right;
+  }
+  /* media queries */
+  @media only screen and (min-width: 0px) and (max-width: 500px) {
+    #payment_method {
+      font-size: 0.8em;
+    }
+    #shipping_add {
+      margin-bottom: 4em;
+    }
+    #paytm_offer {
+      height: 3em;
+    }
+    #secure {
+      font-size: 0.8em;
+    }
+    .credit_card p {
+      font-size: 0.9em;
+    }
+    .cred_images img {
+      width: 2.5em;
+      height: 1.5em;
+    }
+  }
+  

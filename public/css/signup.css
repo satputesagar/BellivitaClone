@@ -1,0 +1,82 @@
+body {
+  font-family: "Century Gothic", sans-serif;
+  font-size: 15px;
+}
+.create_acc {
+  margin-top: 30px;
+  margin-left: 12em;
+  width: 80%;
+  height: 800px;
+  vertical-align: top;
+  display: inline-block;
+  margin-bottom: 20px;
+}
+.lable {
+  font-weight: 550;
+  font-size: 14px;
+  font-family: "Museo Sans", sans-serif;
+}
+.lable sup {
+  color: red;
+}
+#btn1 {
+  width: 23%;
+  height: 42px;
+  background-color: black;
+  color: white;
+  font-size: 16px;
+  border: none;
+  margin-top: 15px;
+}
+#btn1:hover {
+  background-color: #52b359;
+  cursor: pointer;
+}
+.cls {
+  display: inline-block;
+  margin-left: 7px;
+  font-weight: 500;
+  color: #999;
+}
+#heading {
+  font-size: 25px;
+  font-weight: 620;
+  margin-top: 0;
+}
+#gt {
+  color: #999;
+  margin-left: 0.8em;
+  font-size: 0.9em;
+}
+#signup_hr {
+  border: 0.1px solid #ccc;
+}
+#subHeading {
+  color: #6c757d;
+  font-weight: 600;
+  margin-bottom: 30px;
+  margin-top: 25px;
+}
+#myForm input {
+  margin-top: 1em;
+  margin-bottom: 1em;
+  width: 32%;
+  font-size: 16px;
+  padding: 0.5%;
+  border: 1px solid #ccc;
+}
+#error_div {
+  width: 32%;
+  text-align: justify;
+}
+#myForm input:focus {
+  outline: none;
+  border: 1px solid #ccc;
+}
+.error {
+  padding: 10px;
+  margin-left: 10px;
+  width: 90%;
+  border: 1px solid red;
+  border-bottom: 3px solid red;
+}

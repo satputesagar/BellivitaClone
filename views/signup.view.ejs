@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create Account</title>
+    <!-- favicon -->
+    <link
+      rel="shortcut icon"
+      href="//cdn.shopify.com/s/files/1/0054/6665/2718/files/logo_02_32x32.png?v=1606307450"
+      type="image/png"
+    />
+    <!-- CSS  -->
+    <link rel="stylesheet" href="./css/navbar.css" />
+    <link rel="stylesheet" href="./css/signup.css" />
+    <link rel="stylesheet" href="./css/footer.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <!-- bootstrap cdn -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css"
+    />
+    <!-- footer icon cdn -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+      integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <!-- header/navbar -->
+    <%- include("navbar"); %>
+    <div class="create_acc">
+      <a href="index.html"><p class="cls">Home</p></a>
+      <i class="fas fa-chevron-right" id="gt"></i>
+      <a href="signup.html"> <p class="cls">Create Account</p></a>
+      <p id="heading">CREATE AN ACCOUNT</p>
+      <hr id="signup_hr" />
+
+      <p id="subHeading">Sign up for a free account at Bella Vita Organic.</p>
+
+      <div id="myForm">
+        <form id="register" onsubmit="signupUser(event)">
+          <label class="lable">First Name</label><br />
+          <input id="fname" type="text" /><br />
+          <label class="lable">Last Name</label><br />
+          <input id="lname" type="text" /><br />
+          <label class="lable">Your Email Address <sup>*</sup></label
+          ><br />
+          <input id="signup_email" type="email" /><br />
+          <label class="lable">Your Password <sup>*</sup></label
+          ><br />
+          <input id="signup_password" type="password" /><br />
+          <div id="error_div">
+            <p style="color: red" id="error"></p>
+          </div>
+          <div class="Btn">
+            <button id="btn1" type="submit">CREATE AN ACCOUNT</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <!-- footer -->
+    <%- include("footer"); %>
+    <script src="./js/landingPage.js"></script>
+    <script src="./js/signup.js"></script>
+  </body>
+</html>

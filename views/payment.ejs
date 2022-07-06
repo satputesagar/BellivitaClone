@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Payment - Bella Vita Organic - Checkout</title>
+    <!-- favicon -->
+    <link
+      rel="shortcut icon"
+      href="//cdn.shopify.com/s/files/1/0054/6665/2718/files/logo_02_32x32.png?v=1606307450"
+      type="image/png"
+    />
+    <!-- css -->
+    <link rel="stylesheet" href="/css/payment.css" />
+    <!-- bootstrap icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css"
+    />
+    <!-- bootstrap cdn -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div id="container">
+      <header>
+        <div id="logo_div">
+          <img
+            src="https://m.media-amazon.com/images/S/abs-image-upload-na/7/AmazonStores/A21TJRUUN4KGV/afc678bf0a083f43bef9a1e74738989c.w1333.h1333.jpg"
+            alt="logo"
+          />
+        </div>
+        <div id="title">
+          <p id="title_name">IDAM NATURAL WELLNESS PRIVATE LIMITED</p>
+          <br />
+          <span>Cancel</span>
+        </div>
+        <p id="price_pro"></p>
+      </header>
+      <div id="payment">
+        <div id="payment_left">
+          <div class="payment_method" id="card_pay">
+            <i class="bi bi-credit-card"></i>
+            <p>Card</p>
+          </div>
+          <div class="payment_method">
+            <i class="bi bi-safe"></i>
+            <p>UPI</p>
+          </div>
+          <div class="payment_method">
+            <i class="bi bi-wallet2"></i>
+            <p>Wallets</p>
+          </div>
+          <div class="payment_method" id="rzp-button1">
+            <i class="bi bi-bank"></i>
+            <p>Razorpay</p>
+          </div>
+          <div class="payment_method">
+            <i class="bi bi-paypal"></i>
+            <p>PayPal</p>
+          </div>
+        </div>
+        <div id="payment_right">
+          <div id="card_payment">
+            <p>Debit card,Credit card and Prepaid card are supported</p>
+            <input
+              type="text"
+              class="temp"
+              placeholder="Card Number"
+              id="card_number"
+            /><br />
+            <input
+              type="text"
+              class="temp"
+              placeholder="Card Holder Name"
+              id="card_name"
+            /><br />
+            <input type="text" class="temp1" placeholder="MM/YY" id="doe" />
+            <input
+              type="password"
+              class="temp1"
+              placeholder="CVV"
+              id="cvv"
+            /><br />
+            <input type="radio" />
+            <label id="card_label">Save this card</label><br />
+            <button id="card_btn">Pay Now</button>
+            <div id="pay_logos"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="spinner-border text-primary" id="spin" role="status">
+      <span class="sr-only"></span>
+    </div>
+    <div id="sucess">
+      <img src="./images/checkout/sucess.jpg" alt="" />
+      <button id="home_btn">Home</button>
+    </div>
+  </body>
+</html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+<script src="/js/payment.js"></script>

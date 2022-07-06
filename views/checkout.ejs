@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Delivery Address - Bella Vita Organic - Checkout</title>
+    <!-- favicon  -->
+    <link
+      rel="shortcut icon"
+      href="//cdn.shopify.com/s/files/1/0054/6665/2718/files/logo_02_32x32.png?v=1606307450"
+      type="image/png"
+    />
+    <!-- CSS  -->
+    <link rel="stylesheet" href="/css/checkout.css" />
+    <!-- bootstrap cdn -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+    <!-- boostrap icon -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"
+    />
+  </head>
+  <body>
+    <header>
+      <div id="logo_box">
+        <a href="http://localhost:4000">
+          <img
+            src="https://cdn.shopify.com/s/files/1/0054/6665/2718/files/Bellavita_new_age_ayurveda_final_logo.png?41107"
+            alt="logo"
+            id="logo"
+          />
+        </a>
+      </div>
+    </header>
+    <div id="container">
+      <div id="container_left">
+        <div id="container_left_top">
+          <div id="top">
+            <div id="status">
+              <div class="status_title">
+                <div class="circle" id="cart">
+                  <p>></p>
+                </div>
+              </div>
+              <div class="filled"></div>
+              <div class="status_title">
+                <div class="circle" id="da">
+                  <p>></p>
+                </div>
+              </div>
+              <div class="dotted" id="prepaid_dot"></div>
+              <div class="status_title">
+                <div class="circle" id="prepaid">
+                  <p>></p>
+                </div>
+              </div>
+              <div class="dotted" id="payment_dot"></div>
+              <div class="status_title">
+                <div class="circle" id="pay">
+                  <p>></p>
+                </div>
+              </div>
+            </div>
+            <div id="top_titles">
+              <p id="cart_page">CART</p>
+              <p id="delivery_page">DELIVERY ADDRESS</p>
+              <p id="prepaid_page">PREPAID/COD</p>
+              <p id="payment_page">PAYMENT</p>
+            </div>
+          </div>
+        </div>
+        <div id="container_left_bottom"></div>
+      </div>
+      <div id="container_right" class="payment_marge">
+        <div id="item_div"></div>
+        <div id="item_div_bottom"></div>
+      </div>
+    </div>
+  </body>
+</html>
+<script type="module">
+  // element catching
+  var cart_items;
+  var data;
+  let uid = localStorage.getItem("uid");
+
+  // let u_address = JSON.parse(localStorage.getItem("user_address"));
+  // let user_address = u_address.join(",");
+  let check_status = JSON.parse(localStorage.getItem("check_status"));
+  let cart_page = document.getElementById("cart_page");
+  let delivery_page = document.getElementById("delivery_page");
+  let prepaid_page = document.getElementById("prepaid_page");
+  let payment_page = document.getElementById("payment_page");
+
+  // checkout status
+  cart_page.addEventListener("click", () => {
+    window.location.href = "./cart.html";
+  });
+
+  delivery_page.addEventListener("click", () => {
+    for (let key in check_status) {
+      key == "delivery" ? (check_status[key] = "1") : (check_status[key] = "0");
+    }
+    localStorage.setItem("check_status", JSON.stringify(check_status));
+    document.location.reload();
+  });
+
+  prepaid_page.addEventListener("click", () => {
+    for (let key in check_status) {
+      key == "cod" ? (check_status[key] = "1") : (check_status[key] = "0");
+    }
+    localStorage.setItem("check_status", JSON.stringify(check_status));
+    document.location.reload();
+  });
+
+  payment_page.addEventListener("click", () => {
+    for (let key in check_status) {
+      key == "payment" ? (check_status[key] = "1") : (check_status[key] = "0");
+    }
+    localStorage.setItem("check_status", JSON.stringify(check_status));
+    document.location.reload();
+  });
+
+  // importing data
+  import { content, formValidate } from "./js/checkout.js";
+  import {
+    price_desc,
+    check_content,
+    header,
+    prepaid_content,
+    payment_content,
+  } from "./components/check_static.js";
+
+  if (check_status.delivery == 1) {
+    let container_left_bottom = document.getElementById(
+      "container_left_bottom"
+    );
+    container_left_bottom.innerHTML = check_content();
+    formValidate(uid);
+  } else if (check_status.cod == 1) {
+    let container_left_bottom = document.getElementById(
+      "container_left_bottom"
+    );
+    // let u_address = JSON.parse(localStorage.getItem("user_address"));
+    // let user_address = u_address.join(",");
+    container_left_bottom.innerHTML = prepaid_content();
+    let btn_prepaid = document.getElementById("btn_prepaid");
+    let shipping_address = document.getElementById("shipping_address");
+    let prepaid_circle = document.getElementById("prepaid");
+    let delivery_cicle = document.getElementById("da");
+    let prepaid_dot = document.getElementById("prepaid_dot");
+
+    // Fetching User Address from database
+    getAdd(uid);
+    async function getAdd(uid) {
+      let get_add_api = `http://localhost:4000/address/${uid}`;
+
+      //fetch request
+
+      let res = await fetch(get_add_api, {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+
+      let data = await res.json();
+      console.log("data:", data);
+      shipping_address.innerHTML = `${data.address.address}`;
+    }
+
+    prepaid_dot.classList.toggle("toggle");
+    delivery_cicle.style.boxShadow = "none";
+    prepaid_circle.style.boxShadow = "0 0 21px rgb(59 179 0)";
+    prepaid_circle.style.backgroundColor = "#52b359";
+
+    btn_prepaid.addEventListener("click", () => {
+      for (let key in check_status) {
+        key == "payment"
+          ? (check_status[key] = "1")
+          : (check_status[key] = "0");
+      }
+      localStorage.setItem("check_status", JSON.stringify(check_status));
+      window.location.href = `http://localhost:4000/checkout`;
+    });
+  } else if (check_status.payment == 1) {
+    let container_left_bottom = document.getElementById(
+      "container_left_bottom"
+    );
+    container_left_bottom.innerHTML = payment_content();
+    let btn_payment = document.getElementById("btn_payment");
+    let shipping_address = document.getElementById("shipping_address");
+    let prepaid_circle = document.getElementById("prepaid");
+    let delivery_cicle = document.getElementById("da");
+    let prepaid_dot = document.getElementById("prepaid_dot");
+    let payment_dot = document.getElementById("payment_dot");
+    let payment_circle = document.getElementById("pay");
+
+    // Fetching User Address from database
+    getAdd(uid);
+    async function getAdd(uid) {
+      let get_add_api = `http://localhost:4000/address/${uid}`;
+
+      //fetch request
+
+      let res = await fetch(get_add_api, {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+
+      let data = await res.json();
+      console.log("data:", data);
+      shipping_address.innerHTML = `${data.address.address}`;
+    }
+
+    payment_dot.classList.toggle("toggle");
+    prepaid_dot.classList.toggle("toggle");
+    delivery_cicle.style.boxShadow = "none";
+    payment_circle.style.boxShadow = "0 0 21px rgb(59 179 0)";
+    payment_circle.style.backgroundColor = "#52b359";
+    prepaid_circle.style.backgroundColor = "#52b359";
+
+    btn_payment.addEventListener("click", () => {
+      window.location.href =
+        "http://localhost:4000/payment";
+    });
+  }
+
+  // displaying data on UI
+  let item_div = document.getElementById("item_div");
+  let item_div_bottom = document.getElementById("item_div_bottom");
+
+  item_div_bottom.innerHTML = price_desc();
+
+  // setting total amount
+  var sub_total = document.getElementById("sub_total");
+  var sub_total_bottom = document.getElementById("tdb_amount");
+
+  getCartProducts(uid);
+  async function getCartProducts(uid) {
+    let res = await fetch(
+      `http://localhost:4000/cart/api/${uid}`
+    );
+    data = await res.json();
+    cart_items = data.bag;
+    console.log("data:", data);
+    sub_total.innerText = `₹ ${data.totalval}.00`;
+    sub_total_bottom.innerHTML = `<span>INR</span> ₹${data.totalval}.00`;
+
+    content(cart_items, item_div, sub_total, sub_total_bottom, uid);
+  }
+</script>
